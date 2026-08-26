@@ -24,7 +24,37 @@ iframe { filter: invert(1); }
 /* seletor de idioma — bandeiras na barra de abas; cada botão é
    emoji puro (sem img/svg), então também precisa cancelar o
    invert geral, igual foi feito pra bandeira do Brasil no hero */
-#lang-switch { display: flex; align-items: center; gap: 2px; flex-shrink: 0; padding-left: 6px; }
+#lang-switch { position: relative; display: flex; align-items: center; gap: 2px; flex-shrink: 0; padding-left: 6px; }
 .lang-btn { background: none; border: none; cursor: pointer; font-size: 17px; line-height: 1; padding: 6px; border-radius: 8px; opacity: .35; filter: invert(1); transition: opacity .15s; }
 .lang-btn:hover { opacity: .7; }
 .lang-btn.on { opacity: 1; }
+.lang-toggle { display: none; }
+.lang-options { display: flex; align-items: center; gap: 2px; }
+
+/* no mobile as 3 bandeiras sempre abertas espremiam as abas de
+   navegação lá em cima — troca pra um botão só com a bandeira do
+   idioma atual, que abre as outras duas num popover ao tocar */
+@media (max-width: 640px) {
+  #lang-switch { padding-left: 2px; }
+  .lang-toggle { display: block; opacity: .55; }
+  .lang-toggle:active { opacity: 1; }
+  .lang-options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 6px;
+    padding: 4px;
+    background: #0a0a0a;
+    border: 1px solid #262626;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .4);
+    /* já escrita em cor real (não filtrada) pra não duplicar o
+       invert do html — os .lang-btn de dentro continuam com o
+       filter:invert(1) próprio deles, igual no desktop */
+    filter: invert(1);
+    z-index: 50;
+  }
+  #lang-switch.open .lang-options { display: flex; }
+  .lang-options .lang-btn { filter: none; }
+}
