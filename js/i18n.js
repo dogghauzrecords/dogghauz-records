@@ -71,6 +71,8 @@
     "Onde ouvir": { en: "Where to listen", es: "Dónde escuchar" },
     "Catálogo completo": { en: "Full catalog", es: "Catálogo completo" },
     "5,5K seguidores · 79 faixas": { en: "5.5K followers · 79 tracks", es: "5,5K seguidores · 79 pistas" },
+    "Buscar faixas do selo": { en: "Search for the label's tracks", es: "Buscar pistas del sello" },
+    "Canal do selo": { en: "Label channel", es: "Canal del sello" },
     "Perfil do selo": { en: "Label profile", es: "Perfil del sello" },
     "18,9K seguidores": { en: "18.9K followers", es: "18,9K seguidores" },
     "Booking": { en: "Booking", es: "Booking" },
@@ -86,6 +88,7 @@
     },
     "Seu nome (como quer ser creditado)": { en: "Your name (how you want to be credited)", es: "Tu nombre (cómo quieres ser acreditado)" },
     "Seu e-mail": { en: "Your email", es: "Tu correo" },
+    "Seu Instagram (@usuario)": { en: "Your Instagram (@handle)", es: "Tu Instagram (@usuario)" },
     "Título da matéria": { en: "Article title", es: "Título del artículo" },
     "Escreve a matéria inteira aqui, do jeito que ela deve ser publicada": { en: "Write the whole article here, the way it should be published", es: "Escribe el artículo entero aquí, tal como debe publicarse" },
     "Link com até 3 fotos (Drive, Imgur, WeTransfer...)": { en: "Link with up to 3 photos (Drive, Imgur, WeTransfer...)", es: "Enlace con hasta 3 fotos (Drive, Imgur, WeTransfer...)" },
@@ -133,9 +136,13 @@
     /* página de booking */
     "Booking de Showcases": { en: "Showcase Booking", es: "Booking de Showcases" },
     "Solicitar Booking": { en: "Request Booking", es: "Solicitar Booking" },
-    'Selo e coletivo itinerante — showcases "The Dog House" pelo Brasil e fora, levando o line-up completo (fundadores + catálogo) pra sua cidade.': {
-      en: 'Label and traveling collective — "The Dog House" showcases across Brazil and beyond, bringing the full line-up (founders + catalog) to your city.',
-      es: 'Sello y colectivo itinerante — showcases "The Dog House" por Brasil y fuera, llevando el line-up completo (fundadores + catálogo) a tu ciudad.',
+    "A contratação é do showcase da DoggHaüz Records, não de um artista isoladamente. O line-up varia por data — pode ser Mochakk + Jay Mariani + Cesar Nardini, ou apenas Jay Mariani + Cesar Nardini, conforme a agenda de cada um.": {
+      en: "You're booking the DoggHaüz Records showcase, not a single artist. The line-up varies by date — it can be Mochakk + Jay Mariani + Cesar Nardini, or just Jay Mariani + Cesar Nardini, depending on each one's schedule.",
+      es: "La contratación es del showcase de DoggHaüz Records, no de un artista por separado. El line-up varía según la fecha — puede ser Mochakk + Jay Mariani + Cesar Nardini, o solo Jay Mariani + Cesar Nardini, según la agenda de cada uno.",
+    },
+    "O showcase não inclui necessariamente os três fundadores tocando juntos — o line-up de cada data é definido conforme a agenda disponível.": {
+      en: "The showcase doesn't necessarily include all three founders playing together — the line-up for each date is set based on availability.",
+      es: "La showcase no incluye necesariamente a los tres fundadores tocando juntos — el line-up de cada fecha se define según la disponibilidad.",
     },
     "Ver imprensa e cases ↓": { en: "See press & case studies ↓", es: "Ver prensa y casos ↓" },
     "Métricas agregadas via Songstats": { en: "Metrics aggregated via Songstats", es: "Métricas agregadas vía Songstats" },

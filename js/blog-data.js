@@ -146,6 +146,7 @@
     root.innerHTML =
       '<input id="mf-nome" type="text" required placeholder="' + t("Seu nome (como quer ser creditado)") + '" style="' + inputStyle + '">' +
       '<input id="mf-email" type="email" required placeholder="' + t("Seu e-mail") + '" style="' + inputStyle + '">' +
+      '<input id="mf-instagram" type="text" placeholder="' + t("Seu Instagram (@usuario)") + '" style="' + inputStyle + '">' +
       '<input id="mf-titulo" type="text" required placeholder="' + t("Título da matéria") + '" style="' + inputStyle + '">' +
       '<textarea id="mf-materia" required rows="10" placeholder="' + t("Escreve a matéria inteira aqui, do jeito que ela deve ser publicada") + '" style="' + inputStyle + ';resize:vertical"></textarea>' +
       '<input id="mf-fotos" type="url" placeholder="' + t("Link com até 3 fotos (Drive, Imgur, WeTransfer...)") + '" style="' + inputStyle + '">' +
@@ -164,6 +165,7 @@
         status.textContent = t("Preenche nome, e-mail, título e o texto da matéria.");
         return;
       }
+      var instagram = document.getElementById("mf-instagram").value.trim();
       var fotos = document.getElementById("mf-fotos").value.trim();
       var links = document.getElementById("mf-links").value.trim();
       var body =
@@ -171,6 +173,7 @@
         "&bot-field=" +
         "&nome=" + encodeURIComponent(nome) +
         "&email=" + encodeURIComponent(email) +
+        "&instagram=" + encodeURIComponent(instagram) +
         "&titulo=" + encodeURIComponent(titulo) +
         "&fotos_link=" + encodeURIComponent(fotos) +
         "&links_auxiliares=" + encodeURIComponent(links) +
@@ -181,6 +184,7 @@
           status.textContent = t("Recebemos sua matéria! Vamos ler com calma — obrigado.");
           document.getElementById("mf-nome").value = "";
           document.getElementById("mf-email").value = "";
+          document.getElementById("mf-instagram").value = "";
           document.getElementById("mf-titulo").value = "";
           document.getElementById("mf-materia").value = "";
           document.getElementById("mf-fotos").value = "";

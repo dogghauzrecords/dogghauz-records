@@ -87,7 +87,7 @@
     });
     FOUNDERS.forEach(function (f) {
       if (f.href && f.photo) {
-        index[f.name] = { href: f.href, photo: f.photo.indexOf("../") === 0 ? "/assets/dogghauz/photos/press-jay-mariani.jpg" : "/assets/dogghauz/" + f.photo };
+        index[f.name] = { href: f.href, photo: f.photo.indexOf("/") === 0 ? f.photo : "/assets/dogghauz/" + f.photo };
       }
     });
     window.DGGZ_ARTIST_INDEX = index;
@@ -114,7 +114,7 @@
   }
 
   function supItem(p) {
-    var avatar = p.photo ? '<img src="' + (p.photo.indexOf("../") === 0 ? p.photo : "/assets/dogghauz/" + p.photo) + '" alt="' + p.name + '">' : p.initials;
+    var avatar = p.photo ? '<img src="' + (p.photo.indexOf("/") === 0 ? p.photo : "/assets/dogghauz/" + p.photo) + '" alt="' + p.name + '">' : p.initials;
     var inner =
       '<div class="sup-ava">' + avatar + "</div>" +
       '<div><div class="sup-n">' + p.name + '</div><div class="sup-r">' + p.role + "</div></div>";
