@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex" />
+<title>Anti Mag — Painel</title>
+</head>
+<body>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", function (user) {
+      if (!user) {
+        window.netlifyIdentity.on("login", function () {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+<!-- Versão travada (não "@^3.0.0") + SRI: sem isso, o unpkg serve
+     sempre a última 3.x.x na hora do request, sem checagem de
+     integridade — qualquer versão nova (ou o próprio unpkg, se
+     comprometido) rodaria aqui sem aviso. Pra atualizar de propósito:
+     troca a versão E o hash juntos (gerar com
+     `curl -s URL | openssl dgst -sha384 -binary | openssl base64 -A`). -->
+<script src="https://unpkg.com/decap-cms@3.15.1/dist/decap-cms.js" integrity="sha384-in6eHztHveqQ7uMZ1fDaKlDmacQLFuLH2wWrFTiymyuS8zQ5bixwL8U3AeRi8h/L" crossorigin="anonymous"></script>
+</body>
+</html>

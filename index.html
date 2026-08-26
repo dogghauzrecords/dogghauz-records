@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://i.ytimg.com; frame-src https://www.youtube.com; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/dogghauz/icons/favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="/assets/dogghauz/icons/favicon-64.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/dogghauz/icons/apple-touch-icon.png">
+<title>DoggHaüz Records</title>
+<meta name="description" content="DoggHaüz Records — selo brasileiro fundado em 2020 por Mochakk, Cesar Nardini e Jay Mariani. Mais de 50 lançamentos, showcases pelo Brasil e em Portugal.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="DoggHaüz Records">
+<meta property="og:description" content="Selo brasileiro fundado em 2020 por Mochakk, Cesar Nardini e Jay Mariani. Mais de 50 lançamentos, showcases pelo Brasil e em Portugal.">
+<meta property="og:image" content="/assets/dogghauz/icons/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="DoggHaüz Records">
+<meta name="twitter:description" content="Selo brasileiro fundado em 2020 por Mochakk, Cesar Nardini e Jay Mariani.">
+<link rel="stylesheet" href="/css/style.css?v=16">
+<link rel="stylesheet" href="/css/light-theme.css?v=16">
+</head>
+<body>
+<!-- Form estático oculto só pra o Netlify detectar no build e criar a
+     caixa "materia-sugestao" em Site > Forms. O formulário visível é
+     renderizado por JS (js/blog-data.js) e manda os dados pra cá via
+     fetch — sem esse aqui o Netlify não sabe que esse form existe. -->
+<form name="materia-sugestao" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+  <input type="text" name="bot-field">
+  <input type="text" name="nome">
+  <input type="email" name="email">
+  <input type="text" name="titulo">
+  <input type="text" name="fotos_link">
+  <textarea name="links_auxiliares"></textarea>
+  <textarea name="materia"></textarea>
+</form>
+<div class="app">
+
+  <div class="tabs">
+    <img class="site-logo" src="/assets/dogghauz/photos/logo-instagram.jpg" alt="DoggHaüz Records" onclick="showTab('pro')">
+    <div class="tabs-scroll-wrap">
+      <div class="tabs-scroll" id="tabs-scroll">
+        <div class="tab on" data-tab="pro" data-i18n>Início</div>
+        <div class="tab" data-tab="releases">Releases</div>
+        <div class="tab" data-tab="materias" data-i18n>Matérias</div>
+        <div class="tab" data-tab="videos" data-i18n>Vídeos</div>
+        <div class="tab" data-tab="artistas" data-i18n>Artistas</div>
+        <div class="tab" data-tab="demos">Demos</div>
+        <div class="tab" data-tab="blog">Anti Mag</div>
+      </div>
+      <div class="tabs-edge tabs-edge-l" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 5 8 12 15 19"/></svg></div>
+      <div class="tabs-edge tabs-edge-r" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 5 16 12 9 19"/></svg></div>
+    </div>
+    <div id="lang-switch"></div>
+  </div>
+
+  <!-- ═══════════ TAB INÍCIO ═══════════ -->
+  <div id="tab-pro">
+
+    <section class="banner hero-b">
+      <div class="hero-id reveal">
+        <div class="ava-big"><img src="/assets/dogghauz/photos/logo-instagram.jpg" alt="DoggHaüz Records"></div>
+        <div>
+          <div style="font-size:13px;color:#6e6e6e"><span data-i18n>Selo · Coletivo · Brasil</span> <span style="filter:invert(1);display:inline-block">🇧🇷</span></div>
+        </div>
+      </div>
+      <h1 class="giant reveal plx" data-s="0.12">DoggHaüz<br>Records</h1>
+      <p class="big-sub reveal" data-i18n>Movimento legitimamente brasileiro, criado para ir na contramão dos padrões estéticos e musicais.</p>
+      <div class="hero-cta reveal">
+        <a class="btn-w" href="/booking/" data-i18n>Booking</a>
+      </div>
+      <div class="scroll-hint">SCROLL</div>
+    </section>
+
+    <section class="banner inverted">
+      <div class="banner-bg-layer" style="background-image:url('/assets/dogghauz/photos/fundacao-2020.jpg');opacity:.4;filter:invert(1) blur(14px);transform:scale(1.08)"></div>
+      <div class="eyebrow reveal" data-i18n>Fundação · pandemia de 2020</div>
+      <div class="mega reveal plx" data-s="0.18">2020</div>
+      <p class="big-sub reveal" data-i18n>Nasceu de uma sessão de estúdio entre Mochakk, Cesar Nardini e Jay Mariani — três amigos cansados de um mercado saturado, em busca de originalidade. O single de estreia, "This Is Not a Simulation", virou manifesto.</p>
+      <div class="banner-tag reveal" data-i18n>DOGGHAÜZ RECORDS · DESDE 2020</div>
+    </section>
+
+    <section class="banner photo-bg" style="background-image:url('/assets/dogghauz/photos/fundadores-bg.jpg')">
+      <div class="eyebrow reveal" data-i18n>Fundadores</div>
+      <div class="names-wall upper reveal">
+        <a class="name-item" href="https://instagram.com/cesar.nardini" target="_blank" rel="noopener">Cesar Nardini</a>
+        <a class="name-item" href="https://instagram.com/mochakk" target="_blank" rel="noopener">Mochakk</a>
+        <a class="name-item" href="https://jaymariani.com.br">Jay Mariani</a>
+      </div>
+      <div class="banner-tag reveal" data-i18n>TRÊS AMIGOS, UM SELO</div>
+    </section>
+
+    <section class="banner photo-bg" style="background-image:url('/assets/dogghauz/photos/catalogo-bg.jpg')">
+      <div class="eyebrow reveal" style="color:#fff" data-i18n>Alguns nomes do catálogo</div>
+      <div class="names-wall reveal">
+        <a class="name-item" href="https://instagram.com/victorloumusic" target="_blank" rel="noopener">Victor Lou</a>
+        <a class="name-item" href="https://instagram.com/nocapzmusic" target="_blank" rel="noopener">Nocapz</a>
+        <a class="name-item" href="https://instagram.com/brisottimusic" target="_blank" rel="noopener">Brisotti</a>
+        <a class="name-item" href="https://instagram.com/listenduarte" target="_blank" rel="noopener">Duarte</a>
+        <a class="name-item" href="https://instagram.com/steriummusic" target="_blank" rel="noopener">Sterium</a>
+        <a class="name-item" href="https://instagram.com/maliveofficial" target="_blank" rel="noopener">Malive</a>
+        <a class="name-item" href="https://instagram.com/marian_br_" target="_blank" rel="noopener">Marian</a>
+        <a class="name-item" href="https://instagram.com/jamecthekid" target="_blank" rel="noopener">Jame C</a>
+        <a class="name-item" href="https://instagram.com/priciladiazmusic" target="_blank" rel="noopener">Pricila Diaz</a>
+      </div>
+      <div class="banner-tag reveal" data-i18n>52+ LANÇAMENTOS · VER TODOS EM ARTISTAS</div>
+    </section>
+
+    <section class="banner photo-bg" style="background-image:url('/assets/dogghauz/photos/brasil-bg.jpg')">
+      <div class="eyebrow reveal" data-i18n>Showcases</div>
+      <h2 class="giant reveal plx" data-s="0.1">Brasil <span class="thin" data-i18n>de ponta a ponta</span><br>+ Portugal<span class="thin" data-i18n> · Ministerium</span></h2>
+      <p class="big-sub reveal" data-i18n>Savanna Club (Rio do Sul), São José (2x), Porto Velho, Manhuaçu, Curitiba, Vitória, São Paulo e Gate 22 (Campinas) — além de uma showcase no Ministerium, em Portugal.</p>
+    </section>
+
+    <div class="detail">
+      <div class="main">
+
+        <div class="card">
+          <div class="clabel" data-i18n>O que é a DoggHaüz Records</div>
+          <div class="bio">
+            <span data-i18n>A DoggHaüz Records nasceu em 2020, em plena pandemia, de uma sessão de estúdio entre Mochakk, Cesar Nardini e Jay Mariani — três amigos cansados de um mercado saturado e em busca de originalidade. O single de estreia, "This Is Not a Simulation", funcionou como manifesto: uma gravadora brasileira nascida junto ao próprio movimento que pretendia provocar, vendo a liberdade como essência para se comunicar através da música, do visual, da arte e do lifestyle.</span>
+            <br><br>
+            <span data-i18n>Desde então, o selo já soma mais de 50 lançamentos entre house, tech house e minimal deep tech, revelando nomes como Victor Lou, Jho Roscioli, Guilherme Rossi, Duarte, Lucious e Kaddu — sempre com a mesma lógica: dar espaço a talentos brasileiros fora do circuito óbvio. Como resume Mochakk, a ideia sempre foi "building something bigger with all the DJs and producers we think are really killing it in the Brazilian scene".</span>
+            <br><br>
+            <span data-i18n>Fora do estúdio, a DoggHaüz virou também um coletivo itinerante. As showcases "The Dog House" já passaram por Savanna Club (Rio do Sul), São José (2x), Porto Velho, Manhuaçu, Curitiba, Vitória, São Paulo e Gate 22 (Campinas) — além de uma showcase internacional no Ministerium, em Portugal.</span>
+            <br><br>
+            <span data-i18n>Por trás da marca, uma equipe enxuta: Catel no visual, Gaba Kamer na distribuição e Lu Serrano na imprensa — sustentando o crescimento constante de um selo que segue com expansão internacional em curso.</span>
+          </div>
+        </div>
+
+        <div class="card reveal">
+          <div class="clabel" data-i18n>Números</div>
+          <div class="bk-stats" style="padding:0;max-width:none;margin:0">
+            <div class="bk-stat"><div class="bk-stat-n">8,27M</div><div class="bk-stat-l" data-i18n>Streams acumulados em todas as plataformas</div></div>
+            <div class="bk-stat"><div class="bk-stat-n">201</div><div class="bk-stat-l" data-i18n>DJs que já deram suporte às faixas do selo em sets</div></div>
+            <div class="bk-stat"><div class="bk-stat-n">3,26M</div><div class="bk-stat-l" data-i18n>Alcance em playlists — 542 playlists no total</div></div>
+            <div class="bk-stat"><div class="bk-stat-n">51</div><div class="bk-stat-l" data-i18n>Entradas em charts</div></div>
+            <div class="bk-stat"><div class="bk-stat-n">42,9K</div><div class="bk-stat-l" data-i18n>Shazams</div></div>
+            <div class="bk-stat"><div class="bk-stat-n">2020</div><div class="bk-stat-l" data-i18n>Ano de fundação, em plena pandemia</div></div>
+          </div>
+          <div style="font-size:10.5px;color:#4d4d4d;margin-top:14px" data-i18n>Métricas agregadas via Songstats · ago 2026</div>
+        </div>
+
+        <div class="card reveal">
+          <div class="clabel" data-i18n>Showcases & palcos</div>
+          <a class="venue venue-link reveal" href="https://instagram.com/clubsavanna" target="_blank" rel="noopener"><div class="venue-logo"><img src="/assets/photos/venues/savanna-club.jpg" alt=""></div><div><div class="venue-n">Savanna Club</div><div class="venue-l">Rio do Sul, SC</div></div><span class="venue-y" data-i18n>1ª showcase</span></a>
+          <a class="venue venue-link reveal" href="https://instagram.com/deepsouloficial" target="_blank" rel="noopener"><div class="venue-logo"><img src="/assets/dogghauz/venues/deepsoul.jpg" alt=""></div><div><div class="venue-n">Deep Soul</div><div class="venue-l">Porto Velho, RO</div></div><span class="venue-y" data-i18n>Showcase</span></a>
+          <a class="venue venue-link reveal" href="https://instagram.com/castelodocafe" target="_blank" rel="noopener"><div class="venue-logo"><img src="/assets/dogghauz/venues/castelodocafe.jpg" alt=""></div><div><div class="venue-n">Castelo do Café</div><div class="venue-l">Manhuaçu, MG</div></div><span class="venue-y" data-i18n>Showcase</span></a>
+          <a class="venue venue-link reveal" href="https://instagram.com/clubvibe" target="_blank" rel="noopener"><div class="venue-logo"><img src="/assets/photos/venues/clubvibe.jpg" alt=""></div><div><div class="venue-n">Clube Vibe</div><div class="venue-l">Curitiba, PR</div></div><span class="venue-y" data-i18n>Showcase</span></a>
+          <a class="venue venue-link reveal" href="https://instagram.com/meiocwb" target="_blank" rel="noopener"><div class="venue-logo"><img src="/assets/dogghauz/venues/meiocwb.jpg" alt=""></div><div><div class="venue-n">Meio CWB</div><div class="venue-l">Curitiba, PR</div></div><span class="venue-y" data-i18n>Showcase</span></a>
+          <a class="venue venue-link reveal" href="https://instagram.com/yellowdjacademy" target="_blank" rel="noopener"><div class="venue-logo"><img src="/assets/dogghauz/venues/yellowdjacademy.jpg" alt=""></div><div><div class="venue-n">Yellow DJ Academy</div><div class="venue-l">Curitiba, PR</div></div><span class="venue-y" data-i18n>Showcase</span></a>
+          <a class="venue venue-link reveal" href="https://instagram.com/privilegebrasil" target="_blank" rel="noopener"><div class="venue-logo"><img src="/assets/photos/venues/privilege.jpg" alt=""></div><div><div class="venue-n">Privilège</div><div class="venue-l">Vitória, ES</div></div><span class="venue-y" data-i18n>Showcase</span></a>
+          <div class="venue"><div class="venue-logo"><img src="/assets/dogghauz/photos/logo-instagram.jpg" alt=""></div><div><div class="venue-n">Centro Histórico</div><div class="venue-l">São Paulo, SP</div></div><span class="venue-y" data-i18n>Produção própria</span></div>
+          <a class="venue venue-link reveal" href="https://instagram.com/collectivinyl" target="_blank" rel="noopener"><div class="venue-logo"><img src="/assets/dogghauz/venues/collectivinyl.jpg" alt=""></div><div><div class="venue-n">Collectivinyl</div><div class="venue-l">São Paulo, SP</div></div><span class="venue-y" data-i18n>In-store</span></a>
+          <a class="venue venue-link reveal" href="https://instagram.com/dhunclub" target="_blank" rel="noopener"><div class="venue-logo"><img src="/assets/photos/venues/dhun-club.jpg" alt=""></div><div><div class="venue-n">Baroque (Dhun Club)</div><div class="venue-l">São José, SC</div></div><span class="venue-y" data-i18n>Showcase</span></a>
+          <a class="venue venue-link reveal" href="https://instagram.com/suntimeslabel" target="_blank" rel="noopener"><div class="venue-logo"><img src="/assets/dogghauz/venues/suntimes.jpg" alt=""></div><div><div class="venue-n">Suntimes</div><div class="venue-l">São José, SC</div></div><span class="venue-y" data-i18n>Showcase</span></a>
+          <a class="venue venue-link reveal" href="https://instagram.com/gate22br" target="_blank" rel="noopener"><div class="venue-logo"><img src="/assets/dogghauz/venues/gate22.jpg" alt=""></div><div><div class="venue-n">Gate 22</div><div class="venue-l">Campinas, SP</div></div><span class="venue-y" data-i18n>Estreia SP</span></a>
+          <a class="venue venue-link reveal" href="https://instagram.com/ministeriumclub" target="_blank" rel="noopener"><div class="venue-logo"><img src="/assets/photos/venues/ministerium.jpg" alt=""></div><div><div class="venue-n">Ministerium</div><div class="venue-l">Lisboa, Portugal</div></div><span class="venue-y" data-i18n>Showcase</span></a>
+          <a href="/booking/" style="display:block;text-align:center;margin-top:14px;padding:12px;border-radius:100px;background:#fff;color:#000;font-weight:700;font-size:13px;text-decoration:none" data-i18n>Contrate →</a>
+        </div>
+
+      </div>
+
+      <div class="side">
+        <div class="card reveal">
+          <div class="clabel" data-i18n>Onde ouvir</div>
+          <a class="label-row" href="https://www.beatport.com/label/dogghauz-records/87782" target="_blank" rel="noopener"><div class="label-logo"><svg viewBox="0 0 22 28" width="14" height="18" fill="currentColor"><path d="M22 19.8977C21.9962 21.2183 21.6783 22.5181 21.0738 23.6845C20.4691 24.8508 19.596 25.8488 18.5301 26.5919C17.4641 27.3348 16.2374 27.8006 14.9561 27.9487C13.6748 28.0968 12.3777 27.9229 11.1768 27.442C9.97588 26.961 8.90752 26.1876 8.06422 25.1886C7.2209 24.1896 6.6281 22.9952 6.33699 21.7086C6.04592 20.4222 6.06538 19.0824 6.39366 17.8053C6.72198 16.5282 7.34925 15.3523 8.22116 14.3795L2.82452 19.8977L0 17.0049L6.06685 10.8626C6.46673 10.4536 6.78283 9.96689 6.99656 9.43114C7.21034 8.89538 7.31739 8.32122 7.31156 7.74244V0H11.2894V7.71569C11.307 8.8329 11.1009 9.94202 10.684 10.9746C10.2672 12.0073 9.64813 12.9415 8.86527 13.7198L8.68683 13.9025C9.82565 12.8426 11.2401 12.1436 12.7587 11.8899C14.2774 11.6362 15.8353 11.8388 17.2439 12.4732C18.6525 13.1075 19.8515 14.1463 20.6956 15.464C21.5396 16.7817 21.9927 18.3217 22 19.8977ZM18.3964 19.8977C18.405 19.0142 18.1571 18.1481 17.6842 17.4093C17.2112 16.6704 16.5346 16.0921 15.7402 15.7479C14.9457 15.4037 14.0693 15.3091 13.2222 15.4761C12.3751 15.6429 11.5957 16.0639 10.9826 16.6855C10.3695 17.307 9.95069 18.1012 9.77925 18.967C9.60778 19.8328 9.69139 20.7313 10.0194 21.5485C10.3476 22.3655 10.9053 23.0643 11.6219 23.5561C12.3385 24.0478 13.1817 24.3105 14.0443 24.3105C14.6136 24.3158 15.1783 24.2056 15.7058 23.9862C16.2333 23.7669 16.7133 23.4428 17.1179 23.0326C17.5225 22.6223 17.8436 22.1341 18.0632 21.596C18.2826 21.0579 18.3959 20.4808 18.3964 19.8977Z"/></svg></div><div><div class="label-n">Beatport</div><div class="label-r" data-i18n>Catálogo completo</div></div><span class="label-arrow">›</span></a>
+          <a class="label-row" href="https://soundcloud.com/dogghauzrecords" target="_blank" rel="noopener"><div class="label-logo"><svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor"><rect x="2.5" y="13" width="1.8" height="5"/><rect x="5.5" y="11" width="1.8" height="7"/><rect x="8.5" y="8" width="1.8" height="10"/><rect x="11.5" y="9.5" width="1.8" height="8.5"/><path d="M14.5 18v-8.2c.5-.2 1.1-.3 1.7-.3 2.6 0 4.8 2.1 4.8 4.75S18.8 19 16.2 19c-.6 0-1.2-.1-1.7-.4z"/></svg></div><div><div class="label-n">SoundCloud</div><div class="label-r" data-i18n>5,5K seguidores · 79 faixas</div></div><span class="label-arrow">›</span></a>
+          <a class="label-row" href="https://open.spotify.com/artist/38jlH8F6waKoTrVSCk1S1s" target="_blank" rel="noopener"><div class="label-logo"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9.5"/><path d="M6.8 9.8c3.6-1 7.2-.7 9.9.9"/><path d="M7.3 13c3-.8 5.9-.6 8.1.8"/><path d="M8 16c2.3-.6 4.5-.4 6.2.6"/></svg></div><div><div class="label-n">Spotify</div><div class="label-r" data-i18n>Perfil do selo</div></div><span class="label-arrow">›</span></a>
+          <a class="label-row" href="https://www.instagram.com/dogghauz.records/" target="_blank" rel="noopener"><div class="label-logo"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></div><div><div class="label-n">Instagram</div><div class="label-r" data-i18n>18,9K seguidores</div></div><span class="label-arrow">›</span></a>        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ TAB RELEASES ═══════════ -->
+  <div id="tab-releases" class="hidden">
+    <div class="store-hero">
+      <h1 data-i18n>RELEASES</h1>
+      <p data-i18n>Discografia completa — 52 lançamentos no catálogo Beatport.</p>
+    </div>
+    <div class="body" style="display:block">
+      <div id="rel-grid"></div>
+    </div>
+  </div>
+
+  <!-- ═══════════ TAB MATÉRIAS ═══════════ -->
+  <div id="tab-materias" class="hidden">
+    <div class="store-hero">
+      <h1 data-i18n>DOGGHAÜZ NA MÍDIA</h1>
+    </div>
+    <div class="body" style="display:block">
+      <div id="mat-grid"></div>
+    </div>
+  </div>
+
+  <!-- ═══════════ TAB ANTI MAG (blog) ═══════════ -->
+  <div id="tab-blog" class="hidden">
+    <div class="store-hero">
+      <h1>ANTI MAG</h1>
+      <p data-i18n>A revista da DoggHaüz Records — bastidores, lançamentos e a cena por dentro.</p>
+    </div>
+    <div class="body" style="display:block">
+      <div id="blog-grid"></div>
+      <div class="store-section-head"><div class="store-section-title" data-i18n>Escreva pro Anti Mag</div></div>
+      <div class="card" style="max-width:640px;margin:0 auto">
+        <div class="bio" style="margin-bottom:16px" data-i18n>Escreveu uma matéria e quer publicar aqui? Manda o texto completo — passa pela nossa curadoria antes de ir pro ar, mas é a matéria de verdade que a gente recebe, pronta pra revisão.</div>
+        <div id="materia-form-root"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ TAB VÍDEOS ═══════════ -->
+  <div id="tab-videos" class="hidden">
+    <div class="store-hero">
+      <h1 data-i18n>VÍDEOS</h1>
+      <p data-i18n>Aftermovies, sets e lançamentos oficiais.</p>
+    </div>
+    <div class="body" style="display:block">
+      <div class="ff-row" id="vid-nav" style="margin-bottom:16px"></div>
+      <div class="vid-grid" id="vid-grid"></div>
+    </div>
+  </div>
+
+  <!-- ═══════════ TAB DEMOS ═══════════ -->
+  <div id="tab-demos" class="hidden">
+    <div class="store-hero">
+      <h1 data-i18n>ENVIE SUA DEMO</h1>
+      <p data-i18n>Curte o som da DoggHaüz e quer mandar uma faixa? Bora ouvir.</p>
+    </div>
+    <div class="body" style="display:block;max-width:640px;margin:0 auto">
+      <div class="card">
+        <div class="clabel" data-i18n>Como enviar</div>
+        <div class="bio">
+          <span data-i18n>Só aceitamos link do SoundCloud (pode ser privado). Nada de arquivo anexado, nem link de Drive, Dropbox ou qualquer nuvem — se não for link do SoundCloud, não abrimos.</span>
+          <br><br>
+          <span data-i18n>Antes de mandar:</span>
+        </div>
+        <ul style="margin:14px 0 0 18px;padding:0;font-size:13px;line-height:1.9;color:#8a8a8a">
+          <li data-i18n>Manda a faixa mixada e masterizada (ou perto disso).</li>
+          <li data-i18n>Conta rapidamente quem você é e de onde toca.</li>
+        </ul>
+        <div class="clabel" style="margin-top:22px" data-i18n>O que a gente não lança</div>
+        <ul style="margin:14px 0 0 18px;padding:0;font-size:13px;line-height:1.9;color:#8a8a8a">
+          <li>Indie Dance</li>
+          <li>Afro House / Afro Tech</li>
+          <li>Melodic Techno / Organic House</li>
+          <li>Tech House comercial</li>
+          <li>Offbeat genérico tipo Beltran wannabe</li>
+        </ul>
+      </div>
+      <div class="card reveal" style="margin-top:16px;text-align:center">
+        <a class="btn-w" style="display:inline-block" href="mailto:dogghauz.demos@gmail.com?subject=Demo%20para%20a%20DoggHa%C3%BCz%20Records" data-i18n>Enviar demo</a>
+        <div style="margin-top:14px;font-size:12.5px;color:#8a8a8a">
+          <span data-i18n>Se o botão não abrir seu e-mail:</span> <a href="#" id="demo-copy-email" style="color:inherit;text-decoration:underline">dogghauz.demos@gmail.com (copiar)</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ TAB ARTISTAS ═══════════ -->
+  <div id="tab-artistas" class="hidden">
+    <div class="store-hero">
+      <h1 data-i18n>ARTISTAS</h1>
+      <p data-i18n>Fundadores, equipe e o catálogo da DoggHaüz Records.</p>
+    </div>
+    <div class="body" style="display:block;flex-direction:column" id="roster-root"></div>
+  </div>
+
+  <div class="toast" id="toast">•</div>
+</div>
+
+<script src="/js/icons.js?v=16"></script>
+<script src="/js/i18n.js?v=16"></script>
+<script src="/js/main.js?v=16"></script>
+<script src="/js/materias-data.js?v=16"></script>
+<script src="/js/blog-data.js?v=16"></script>
+<script src="/js/videos-data.js?v=16"></script>
+<script src="/js/releases-data.js?v=16"></script>
+<script src="/js/roster-data.js?v=16"></script>
+</body>
+</html>

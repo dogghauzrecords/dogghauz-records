@@ -1,0 +1,30 @@
+/* ============================================================
+   LIGHT THEME — inversão de cor pro site da DoggHaüz Records.
+   O style.css compartilhado (usado também pelo site do Jay
+   Mariani) é praticamente todo em cinza puro — todo valor usado
+   nesta página tem R=G=B — então dá pra inverter a página inteira
+   com filter:invert(1) sem nenhum desvio de matiz, sem precisar
+   reescrever cor por cor. Só cancela o invert em cima das fotos
+   reais (<img>) e das seções .photo-bg — essas continuam escuras/
+   moody por cima da imagem, igual no design original, porque é
+   isso que dá legibilidade ao texto claro sobre a foto.
+   ============================================================ */
+html { filter: invert(1); }
+img { filter: invert(1); }
+iframe { filter: invert(1); }
+.banner.photo-bg { filter: invert(1); }
+/* botão do WhatsApp é verde de marca — cancela o invert geral pra
+   não virar roxo */
+.contact-btn.whatsapp { filter: invert(1); }
+
+/* releases/artistas — título e nome ficam sublinhados no hover pra
+   avisar que são clicáveis, igual o resto do site (.venue-n, .label-n) */
+.mus-title a:hover { text-decoration: underline; }
+
+/* seletor de idioma — bandeiras na barra de abas; cada botão é
+   emoji puro (sem img/svg), então também precisa cancelar o
+   invert geral, igual foi feito pra bandeira do Brasil no hero */
+#lang-switch { display: flex; align-items: center; gap: 2px; flex-shrink: 0; padding-left: 6px; }
+.lang-btn { background: none; border: none; cursor: pointer; font-size: 17px; line-height: 1; padding: 6px; border-radius: 8px; opacity: .35; filter: invert(1); transition: opacity .15s; }
+.lang-btn:hover { opacity: .7; }
+.lang-btn.on { opacity: 1; }
