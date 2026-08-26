@@ -136,9 +136,9 @@
     /* página de booking */
     "Booking de Showcases": { en: "Showcase Booking", es: "Booking de Showcases" },
     "Solicitar Booking": { en: "Request Booking", es: "Solicitar Booking" },
-    "A contratação é do showcase da DoggHaüz Records, não de um artista isoladamente. O line-up varia por data — pode ser Mochakk + Jay Mariani + Cesar Nardini, ou apenas Jay Mariani + Cesar Nardini, conforme a agenda de cada um.": {
-      en: "You're booking the DoggHaüz Records showcase, not a single artist. The line-up varies by date — it can be Mochakk + Jay Mariani + Cesar Nardini, or just Jay Mariani + Cesar Nardini, depending on each one's schedule.",
-      es: "La contratación es del showcase de DoggHaüz Records, no de un artista por separado. El line-up varía según la fecha — puede ser Mochakk + Jay Mariani + Cesar Nardini, o solo Jay Mariani + Cesar Nardini, según la agenda de cada uno.",
+    "A contratação do showcase é baseada pela curadoria do coletivo sujeito a disponibilidade da agenda de cada artista.": {
+      en: "The showcase booking is based on the collective's curation, subject to each artist's schedule availability.",
+      es: "La contratación del showcase se basa en la curaduría del colectivo, sujeta a la disponibilidad de la agenda de cada artista.",
     },
     "O showcase não inclui necessariamente os três fundadores tocando juntos — o line-up de cada data é definido conforme a agenda disponível.": {
       en: "The showcase doesn't necessarily include all three founders playing together — the line-up for each date is set based on availability.",
