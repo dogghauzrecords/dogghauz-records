@@ -1,5 +1,5 @@
 /* ============================================================
-   ANTI MAG — blog/revista da DoggHaüz Records. Busca
+   DGGZ MAG — blog/revista da DoggHaüz Records. Busca
    /blog/posts.json em tempo real (sem embutir no JS),
    pra quem edita pelo painel em /admin ver o post aparecer aqui
    sem precisar de novo deploy manual do código. Editado via
@@ -83,7 +83,7 @@
       (big ? '<div class="mat-featured-tag">' + t("Destaque") + "</div>" : "") +
       (p.cover ? '<div class="mat-thumb"><img src="' + p.cover + '" alt="" loading="lazy"></div>' : "") +
       '<div class="mat-body"' + (big && !p.cover ? ' style="padding-right:80px"' : "") + ">" +
-      '<div class="mat-outlet">Anti Mag · ' + fmtDate(p.date) + "</div>" +
+      '<div class="mat-outlet">DGGZ MAG · ' + fmtDate(p.date) + "</div>" +
       '<div class="mat-title">' + escapeHtml(p.title) + "</div>" +
       (p.excerpt ? '<div class="mat-excerpt">' + escapeHtml(p.excerpt) + "</div>" : "") +
       "</div>" +
@@ -103,7 +103,7 @@
       grid.innerHTML =
         '<div style="padding:100px 20px;text-align:center">' +
         '<div style="font-size:22px;font-weight:800;letter-spacing:2px;text-transform:uppercase">' + t("Em breve") + "</div>" +
-        '<div style="font-size:13.5px;color:#8a8a8a;margin-top:10px">' + t("As primeiras matérias do Anti Mag estão a caminho.") + "</div>" +
+        '<div style="font-size:13.5px;color:#8a8a8a;margin-top:10px">' + t("As primeiras matérias do DGGZ MAG estão a caminho.") + "</div>" +
         "</div>";
       return;
     }

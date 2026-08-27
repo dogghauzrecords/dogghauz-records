@@ -10,10 +10,10 @@ public_folder: "/assets/dogghauz/blog"
 
 collections:
   - name: "posts"
-    label: "Anti Mag"
+    label: "DGGZ MAG"
     files:
       - file: "blog/posts.json"
-        label: "Matérias do Anti Mag"
+        label: "Matérias do DGGZ MAG"
         name: "posts"
         fields:
           - label: "Matérias"

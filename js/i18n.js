@@ -79,9 +79,9 @@
     "RELEASES": { en: "RELEASES", es: "LANZAMIENTOS" },
     "Discografia completa — 52 lançamentos no catálogo Beatport.": { en: "Full discography — 52 releases in the Beatport catalog.", es: "Discografía completa — 52 lanzamientos en el catálogo de Beatport." },
     "DOGGHAÜZ NA MÍDIA": { en: "DOGGHAÜZ IN THE PRESS", es: "DOGGHAÜZ EN LOS MEDIOS" },
-    "ANTI MAG": { en: "ANTI MAG", es: "ANTI MAG" },
+    "DGGZ MAG": { en: "DGGZ MAG", es: "DGGZ MAG" },
     "A revista da DoggHaüz Records — bastidores, lançamentos e a cena por dentro.": { en: "The DoggHaüz Records magazine — behind the scenes, releases and the scene from the inside.", es: "La revista de DoggHaüz Records — detrás de escena, lanzamientos y la escena por dentro." },
-    "Escreva pro Anti Mag": { en: "Write for Anti Mag", es: "Escribe para Anti Mag" },
+    "Escreva pro DGGZ MAG": { en: "Write for DGGZ MAG", es: "Escribe para DGGZ MAG" },
     "Escreveu uma matéria e quer publicar aqui? Manda o texto completo — passa pela nossa curadoria antes de ir pro ar, mas é a matéria de verdade que a gente recebe, pronta pra revisão.": {
       en: "Wrote an article and want to publish it here? Send the full text — it goes through our curation before going live, but it's the real piece we want, ready for review.",
       es: "¿Escribiste un artículo y quieres publicarlo aquí? Manda el texto completo — pasa por nuestra curaduría antes de publicarse, pero es el artículo de verdad que recibimos, listo para revisión.",
@@ -131,7 +131,7 @@
     "Recebemos sua matéria! Vamos ler com calma — obrigado.": { en: "We received your article! We'll give it a proper read — thank you.", es: "¡Recibimos tu artículo! Lo vamos a leer con calma — gracias." },
     "Não rolou enviar agora — tenta de novo em instantes.": { en: "Couldn't send it right now — try again in a moment.", es: "No se pudo enviar ahora — intenta de nuevo en un momento." },
     "Em breve": { en: "Coming soon", es: "Próximamente" },
-    "As primeiras matérias do Anti Mag estão a caminho.": { en: "The first Anti Mag articles are on their way.", es: "Los primeros artículos de Anti Mag están en camino." },
+    "As primeiras matérias do DGGZ MAG estão a caminho.": { en: "The first DGGZ MAG articles are on their way.", es: "Los primeros artículos de DGGZ MAG están en camino." },
     "Não foi possível carregar as matérias agora.": { en: "Couldn't load the articles right now.", es: "No se pudieron cargar los artículos ahora." },
     /* página de booking */
     "Booking de Showcases": { en: "Showcase Booking", es: "Booking de Showcases" },
