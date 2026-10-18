@@ -50,27 +50,51 @@
     return html;
   }
 
+  var LOCALES = { pt: "pt-BR", en: "en-US", es: "es-ES" };
+
+  function curLang() {
+    return window.DGGZ_LANG ? window.DGGZ_LANG.get() : "pt";
+  }
+
+  /* campo traduzido da matéria: title_en / excerpt_es / body_en ...
+     (preenchidos no painel). Sem tradução pro idioma atual, cai no PT. */
+  function field(p, name) {
+    var l = curLang();
+    return (l !== "pt" && p[name + "_" + l]) || p[name];
+  }
+
   function fmtDate(iso) {
     if (!iso) return "";
     var d = new Date(iso + (iso.length <= 10 ? "T00:00:00" : ""));
     if (isNaN(d)) return iso;
-    return d.toLocaleDateString("pt-BR", { day: "2-digit", month: "short", year: "numeric" });
+    return d.toLocaleDateString(LOCALES[curLang()] || "pt-BR", { day: "2-digit", month: "short", year: "numeric" });
   }
 
+  var openedPost = null;
+
   function openPost(p) {
+    closePost();
+    openedPost = p;
     var overlay = document.createElement("div");
     overlay.className = "modal-overlay";
+    overlay.id = "am-overlay";
     overlay.innerHTML =
       '<div class="modal" style="position:relative;max-width:640px;text-align:left">' +
       '<button class="modal-close" id="am-close">✕</button>' +
       (p.cover ? '<img src="' + p.cover + '" alt="" style="width:100%;border-radius:12px;margin-bottom:16px">' : "") +
       '<div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#8a8a8a;margin-bottom:6px">' + fmtDate(p.date) + " · " + escapeHtml(p.author || "DoggHaüz Records") + "</div>" +
-      '<h3 style="font-size:22px;margin-bottom:14px">' + escapeHtml(p.title) + "</h3>" +
-      '<div class="am-body" style="font-size:14px;line-height:1.7;color:#ccc">' + mdToHtml(p.body) + "</div>" +
+      '<h3 style="font-size:22px;margin-bottom:14px">' + escapeHtml(field(p, "title")) + "</h3>" +
+      '<div class="am-body" style="font-size:14px;line-height:1.7;color:#ccc">' + mdToHtml(field(p, "body")) + "</div>" +
       "</div>";
     document.body.appendChild(overlay);
-    overlay.querySelector("#am-close").onclick = function () { overlay.remove(); };
-    overlay.onclick = function (e) { if (e.target === overlay) overlay.remove(); };
+    overlay.querySelector("#am-close").onclick = closePost;
+    overlay.onclick = function (e) { if (e.target === overlay) closePost(); };
+  }
+
+  function closePost() {
+    var o = document.getElementById("am-overlay");
+    if (o) o.remove();
+    openedPost = null;
   }
 
   function t(s) {
@@ -84,8 +108,8 @@
       (p.cover ? '<div class="mat-thumb"><img src="' + p.cover + '" alt="" loading="lazy"></div>' : "") +
       '<div class="mat-body"' + (big && !p.cover ? ' style="padding-right:80px"' : "") + ">" +
       '<div class="mat-outlet">DGGZ MAG · ' + fmtDate(p.date) + "</div>" +
-      '<div class="mat-title">' + escapeHtml(p.title) + "</div>" +
-      (p.excerpt ? '<div class="mat-excerpt">' + escapeHtml(p.excerpt) + "</div>" : "") +
+      '<div class="mat-title">' + escapeHtml(field(p, "title")) + "</div>" +
+      (field(p, "excerpt") ? '<div class="mat-excerpt">' + escapeHtml(field(p, "excerpt")) + "</div>" : "") +
       "</div>" +
       "</div>"
     );
@@ -208,5 +232,6 @@
   document.addEventListener("langchange", function () {
     renderMateriaForm();
     render(lastPosts);
+    if (openedPost && document.getElementById("am-overlay")) openPost(openedPost);
   });
 })();

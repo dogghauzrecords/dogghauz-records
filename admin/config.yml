@@ -28,4 +28,10 @@ collections:
               - { label: "Capa", name: "cover", widget: "image", required: false }
               - { label: "Resumo (aparece no card)", name: "excerpt", widget: "text" }
               - { label: "Conteúdo", name: "body", widget: "markdown" }
+              - { label: "Título (English)", name: "title_en", widget: "string", required: false }
+              - { label: "Resumo (English)", name: "excerpt_en", widget: "text", required: false }
+              - { label: "Conteúdo (English)", name: "body_en", widget: "markdown", required: false }
+              - { label: "Título (Español)", name: "title_es", widget: "string", required: false }
+              - { label: "Resumo (Español)", name: "excerpt_es", widget: "text", required: false }
+              - { label: "Conteúdo (Español)", name: "body_es", widget: "markdown", required: false }
               - { label: "Publicada", name: "published", widget: "boolean", default: true }

@@ -186,8 +186,6 @@
     document.querySelectorAll(".lang-btn").forEach(function (b) {
       b.classList.toggle("on", b.dataset.lang === lang);
     });
-    var toggle = document.querySelector(".lang-toggle");
-    if (toggle) toggle.textContent = FLAGS[lang];
     document.documentElement.lang = lang === "pt" ? "pt-BR" : lang;
   }
 
@@ -197,31 +195,14 @@
     document.dispatchEvent(new CustomEvent("langchange", { detail: { lang: lang } }));
   }
 
-  /* No mobile o seletor fica fechado, só com a bandeira do idioma
-     atual (botão .lang-toggle) — tocar nele abre as outras opções
-     num popover, em vez de deixar as 3 bandeiras sempre abertas
-     brigando por espaço com as abas. No desktop o CSS ignora esse
-     estado e sempre mostra as 3 lado a lado. */
   function renderSwitcher() {
     var host = document.getElementById("lang-switch");
     if (!host) return;
-    host.innerHTML =
-      '<button class="lang-btn lang-toggle" type="button" aria-label="Idioma">' + FLAGS[currentLang()] + "</button>" +
-      '<div class="lang-options">' +
-      ["pt", "en", "es"].map(function (l) { return '<button class="lang-btn" data-lang="' + l + '" title="' + l.toUpperCase() + '">' + FLAGS[l] + "</button>"; }).join("") +
-      "</div>";
-    Array.prototype.forEach.call(host.querySelectorAll(".lang-options .lang-btn"), function (b) {
-      b.addEventListener("click", function () {
-        setLang(b.dataset.lang);
-        host.classList.remove("open");
-      });
-    });
-    host.querySelector(".lang-toggle").addEventListener("click", function (e) {
-      e.stopPropagation();
-      host.classList.toggle("open");
-    });
-    document.addEventListener("click", function (e) {
-      if (!host.contains(e.target)) host.classList.remove("open");
+    host.innerHTML = ["pt", "en", "es"]
+      .map(function (l) { return '<button class="lang-btn" data-lang="' + l + '" title="' + l.toUpperCase() + '">' + FLAGS[l] + "</button>"; })
+      .join("");
+    Array.prototype.forEach.call(host.querySelectorAll(".lang-btn"), function (b) {
+      b.addEventListener("click", function () { setLang(b.dataset.lang); });
     });
   }
 
