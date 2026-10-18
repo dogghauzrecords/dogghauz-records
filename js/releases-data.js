@@ -1,13 +1,14 @@
 /* ============================================================
    DISCOGRAFIA — catálogo completo levantado no Beatport
-   (beatport.com/label/dogghauz-records/87782), 52 títulos únicos,
+   (beatport.com/label/dogghauz-records/87782), 53 títulos únicos,
    mais recente → mais antigo conforme listagem do Beatport
-   (checado 25 ago 2026). Link real por faixa (Beatport sempre;
+   (checado 18 out 2026). Link real por faixa (Beatport sempre;
    Spotify e Apple Music quando encontrado) — sem link fabricado:
    o que não foi confirmado simplesmente não aparece.
    ============================================================ */
 (function () {
   var RELEASES = [
+    { title: "ContraFluxo.Pt1", img: "contrafluxo-pt1.jpg", artists: "Jay Mariani, Cesar Nardini", tag: "Novo · 16 out", beatport: "https://www.beatport.com/release/contrafluxopt1/7505216", spotify: "https://open.spotify.com/album/3U2kGeIvbrwIllVFfC4fJh", apple: "https://music.apple.com/us/album/contrafluxo-pt1-single/6815222621" },
     { title: "NoComptzz", img: "nocomptzz.jpg", artists: "Aaron Martin", beatport: "https://www.beatport.com/track/nocomptzz/18428256", spotify: "https://open.spotify.com/track/5jT4PBwIfo3mj8R1fXoV8I" , apple: "https://music.apple.com/us/album/nocomptzz/1716336928?i=1716336929" },
     { title: "The Dog House", img: "the-dog-house.jpg", artists: "Marian (BR)", beatport: "https://www.beatport.com/track/the-dog-house/18442114", spotify: "https://open.spotify.com/track/30Mx0w2JGvVVc6bkJxcLH5" , apple: "https://music.apple.com/us/album/the-dog-house/1720457057?i=1720457058" },
     { title: "Dogghaüz_Various Artists", img: "doggha-z-various-artists.jpg", artists: "Davide Mentesana, Puff (ITA), LET BR, Haustuff, DRE (BR), Markovni, Matevs", beatport: "https://www.beatport.com/release/dogghauz_various-artists/4295599", spotify: "https://open.spotify.com/album/7MqlAcwcpkYA6WcEYiHXvP" , apple: "https://music.apple.com/us/album/doggha%C3%BCz-various-artists/1710764135" },

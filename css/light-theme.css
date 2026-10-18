@@ -58,3 +58,26 @@ iframe { filter: invert(1); }
   #lang-switch.open .lang-options { display: flex; }
   .lang-options .lang-btn { filter: none; }
 }
+
+/* hero com pôster — o pôster (ContraFluxo + ADE) é a primeira imagem
+   do site. Desktop: texto à esquerda, pôster à direita. Mobile: pôster
+   primeiro, texto embaixo. As cores aqui são as de "antes" do invert
+   global (branco = texto preto na tela), igual ao resto do style.css. */
+.hero-split { flex-direction: column; align-items: stretch; gap: 36px; }
+.hero-poster { margin: 0; width: 100%; max-width: 560px; align-self: center; }
+.hero-poster img {
+  display: block; width: 100%; height: auto; border-radius: 14px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, .35), 0 2px 8px rgba(0, 0, 0, .25);
+  transition: transform .5s cubic-bezier(.2, .8, .2, 1);
+}
+@media (hover: hover) { .hero-poster:hover img { transform: translateY(-4px) scale(1.012); } }
+.hero-poster-links { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-top: 14px; font-size: 12px; letter-spacing: .4px; color: #8a8a8a; }
+.hero-poster-links a { color: #fff; text-decoration: none; font-weight: 600; }
+.hero-poster-links a:hover { text-decoration: underline; }
+@media (min-width: 900px) {
+  .hero-split { flex-direction: row; align-items: center; gap: 56px; }
+  .hero-split .hero-copy { flex: 1 1 0; min-width: 0; order: 1; }
+  .hero-split .hero-poster { flex: 0 0 min(44%, 540px); max-width: none; order: 2; }
+  .hero-split .giant { font-size: clamp(44px, 6.2vw, 96px); }
+}
+@media (prefers-reduced-motion: reduce) { .hero-poster img { transition: none; } }
