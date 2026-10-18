@@ -59,3 +59,16 @@ iframe { filter: invert(1); }
   .hero-split .giant { font-size: clamp(44px, 6.2vw, 96px); }
 }
 @media (prefers-reduced-motion: reduce) { .hero-poster img { transition: none; } }
+
+/* matéria do DGGZ MAG aberta — o texto + imagens é bem mais alto que a
+   tela, então o overlay rola (em vez de centralizar e cortar topo e
+   botão de fechar fora da viewport) e o ✕ fica fixo no canto. */
+#am-overlay { align-items: flex-start; overflow-y: auto; overscroll-behavior: contain; padding: 16px; -webkit-overflow-scrolling: touch; }
+#am-overlay .modal { margin: 0 auto; max-width: 640px; }
+#am-overlay .modal img { max-width: 100%; height: auto; }
+#am-overlay .modal-close { position: fixed; top: 22px; right: max(22px, calc(50% - 300px)); z-index: 2; width: 34px; height: 34px; border-radius: 50%; background: rgba(14, 14, 14, .82); color: #fff; font-size: 15px; line-height: 1; backdrop-filter: blur(6px); }
+@media (max-width: 560px) {
+  #am-overlay { padding: 10px; }
+  #am-overlay .modal { padding: 20px 16px; border-radius: 14px; }
+  #am-overlay .modal-close { top: 18px; right: 18px; }
+}

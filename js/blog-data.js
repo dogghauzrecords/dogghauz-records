@@ -87,6 +87,7 @@
       '<div class="am-body" style="font-size:14px;line-height:1.7;color:#ccc">' + mdToHtml(field(p, "body")) + "</div>" +
       "</div>";
     document.body.appendChild(overlay);
+    document.body.style.overflow = "hidden";
     overlay.querySelector("#am-close").onclick = closePost;
     overlay.onclick = function (e) { if (e.target === overlay) closePost(); };
   }
@@ -94,6 +95,7 @@
   function closePost() {
     var o = document.getElementById("am-overlay");
     if (o) o.remove();
+    document.body.style.overflow = "";
     openedPost = null;
   }
 
